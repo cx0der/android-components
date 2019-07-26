@@ -47,7 +47,7 @@ class AppLinksFeature(
     private val whitelistedSchemes: Set<String> = setOf("mailto", "market", "sms", "tel"),
     private val fragmentManager: FragmentManager? = null,
     private var dialog: RedirectDialogFragment = SimpleRedirectDialogFragment.newInstance(),
-    private val useCases: AppLinksUseCases = AppLinksUseCases(context)
+    val useCases: AppLinksUseCases = AppLinksUseCases(context)
 ) : LifecycleAwareFeature {
 
     @VisibleForTesting
